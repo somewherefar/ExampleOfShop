@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ExampleOfShop</title>
+  <title>ExampleOfShop</title>
+  <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<section id="nav_pages" class="bg bg_green">
+	<nav class="to_center">
+		<ul id="pages_ul">
+			<li>
+				<a href="<%=welcome_home_path%>"><i class="fa fa-home"></i><span>home</span></a>
+			</li>
+			<li>
+				<a href="<%=accounts_path%>"><i class="fa fa-user"></i><span>my account</span></a>
+			</li>
+			<li>
+				<a href=""><i class="fa fa-shopping-cart"></i><span>shopping cart</span></a>
+			</li>
+			<li>
+				<a href="<%=checkout_new_path%>"><i class="fa fa-check"></i><span>checkout</span></a>
+			</li>
+		</ul>
+		<ul id="settings_ul">
+			<li>
+				<a href="">
+					<img src="<%=image_path 'nav_english.png'%>" alt="">
+					<span>english</span>
+					<i class="fa fa-sort-desc fa-3x"></i>
+				</a>
+			</li>
+			<li>
+				<a href="">
+					<i id="dollar_i" class="fa fa-dollar bg_green"></i>
+					<span>dollar</span>
+					<i class="fa fa-sort-desc"></i>
+				</a>
+			</li>
+		</ul>
+	</nav>
+</section>
+<section id="logo_login_reg" class="to_center">
+	<div id="logo">Example of shop</div>
+	<div id="login_reg">
+		<a id="login_a" href="#" title="">log in</a>
+		<span>or</span>
+		<a id="create_account_a" href="<%= new_customer_path %>" data-remote="true" title="">create account</a>
+		<div class="cart_wishlist">
+			<a href="#">
+				<i id="wishlist_i" class="fa fa-pencil-square-o bg_green">
+				<svg width="26px" height="26px">
+					<circle r="11" cx="13" cy="13" fill="#709b1d" stroke="white" stroke-width="2"/>
+					<text x="7" y="16.5" fill="#709b1d">01</text>
+				</svg>
+				</i>
+			</a>					
+		</div>
+		<div class="cart_wishlist">
+			<a href="#">
+				<i id="cart_i" class="fa fa-shopping-cart bg_green">
+					<svg width="26px" height="26px">
+						<circle r="11" cx="13" cy="13" fill="#709b1d" stroke="white" stroke-width="2"/>
+						<text x="7" y="16.5" fill="#709b1d">01</text>
+					</svg>
+				</i>
+			</a>	
+		</div>
+	</div>
+</section>
+<section id="product_category" class="bg bg_grey">
+	<menu class="to_center">
+		<ul id="product_category_ul" >
+			<li><a href="#">smart phone</a></li>
+			<li><a href="#">desktop</a></li>
+			<li><a href="#">laptop</a></li>
+			<li><a href="#">accessories</a></li>
+			<li><a href="#">networkin</a></li>
+			<li><a href="#">software</a></li>
+			<li id="search_li">
+				<%= form_tag do %>
+					<% search_field_tag "search_text" %>
+				<% end %>
+			</li>
+		</ul>
+	</menu>
+</section>
+<section id="dynamic_content_1" class="<%= 'to_center' if controller.controller_name != 'welcome' %>">
+	<%=yield :d_c_1%>
+</section>
+<section id="advantages" class="bg bg_green">
+	<div class="to_center">
+		<ul>
+			<li>
+				<i class="fa fa-paper-plane-o fa-4x"></i>
+				<div class="text"><span class="title">first shipping</span><br><span class="body">get you every whare</span></div>
+			</li>
+			<li>
+				<i class="fa fa-unlock-alt fa-4x"><i class="fa fa-remove"></i></i>
+				<div class="text"><span class="title">secure store</span><br><span class="body">100% secure store</span></div>
+			</li>
+			<li>
+				<i class="fa fa-clock-o fa-4x"></i>
+				<div class="text"><span class="title">save time</span><br><span class="body">save your time</span></div>
+			</li>
+			<li>
+				<i class="fa fa-shopping-cart fa-4x"></i>
+				<div class="text"><span class="title">pay on delivery</span><br><span class="body">get you every whare</span></div>
+			</li>
+		</ul>
+	</div>
+</section>
+<section id="dynamic_content_2" class="to_center">
+	<%= yield :d_c_2%>
+</section>
+<section id="our_brand" class="to_center">
+	<h3>our brand</h3>
+	<ul id="brands">
+		<li><img src="<%=image_path 'learn.png'%>" alt=""><span>learn</span></li>
+		<li><img src="<%=image_path 'memory.png'%>" alt=""><span>learn and repeat</span></li>
+		<li><img src="<%=image_path 'mind.png'%>" alt=""><span>repeat</span></li>
+		<li><img src="<%=image_path 'practise.png'%>" alt=""><span>practise</span></li>
+		<li><img src="<%=image_path 'develop.png'%>" alt=""><span>develop</span></li>
+		<li><img src="<%=image_path 'rest.png'%>" alt=""><span>rest</span></li>
+	</ul>
+</section>
+<section id="site_links_group" class="bg bg_grey">
+	<div class="to_center">
+		<div class="group">
+			<p>information</p>
+			<ul>
+				<li><i class="fa fa-caret-right"></i><a href="#" title="">about us</a></li>
+				<li><i class="fa fa-caret-right"></i><a href="#" title="">customar service</a></li>
+				<li><i class="fa fa-caret-right"></i><a href="#" title="">privacy policy</a></li>
+				<li><i class="fa fa-caret-right"></i><a href="#" title="">site map</a></li>
+				<li><i class="fa fa-caret-right"></i><a href="#" title="">contact</a></li>
+			</ul>
+		</div>
+		<div class="group">
+			<p>why buy from us</p>
+			<ul>
+				<li><i class="fa fa-caret-right"></i><a href="#" title="">about us</a></li>
+				<li><i class="fa fa-caret-right"></i><a href="#" title="">shipping & returns</a></li>
+				<li><i class="fa fa-caret-right"></i><a href="#" title="">international shippinh</a></li>
+				<li><i class="fa fa-caret-right"></i><a href="#" title="">affiliates</a></li>
+				<li><i class="fa fa-caret-right"></i><a href="#" title="">group sales</a></li>
+			</ul>
+		</div>
+		<div class="group">
+			<p>my account</p>
+			<ul>
+				<li><i class="fa fa-caret-right"></i><a href="#" title="">sign in</a></li>
+				<li><i class="fa fa-caret-right"></i><a href="#" title="">view cart</a></li>
+				<li><i class="fa fa-caret-right"></i><a href="#" title="">my wishlist</a></li>
+				<li><i class="fa fa-caret-right"></i><a href="#" title="">track my order</a></li>
+				<li><i class="fa fa-caret-right"></i><a href="#" title="">help</a></li>
+			</ul>
+		</div>
+		<div class="group">
+			<p>contact</p>
+			<ul>
+				<li><i class="fa fa-compass"></i>Russia</li>
+				<li><i class="fa fa-tablet"></i>8343434...</li>
+				<li><i class="fa fa-envelope"></i>sdfdsf@dsfsfd.ru</li>
+			</ul>
+		</div>
+	</div>
+</section>
+<section id="payments_socials" class="bg bg_grey">
+	<div class="to_center">
+		<p id="weaccept_p" class="bg_green">we accept</p>
+		<ul id="cards_ul">
+			<li><i class="fa fa-cc-visa fa-4x"></i></li>
+			<li><i class="fa fa-cc-mastercard fa-4x"></i></li>
+			<li><i class="fa fa-cc-paypal fa-4x"></i></li>
+			<li><i class="fa fa-cc-amex fa-4x"></i></li>
+		</ul>
+		<ul id="socials_ul">
+			<li><i class="fa fa-facebook-square fa-4x"></i></li>
+			<li><i class="fa fa-google-plus-square fa-4x"></i></li>
+			<li><i class="fa fa-twitter-square fa-4x"></i></li>
+			<li><i class="fa fa-vk fa-4x"></i></li>
+			<li></li>
+		</ul>
+		<p id="followus_p" class="bg_green">follow us</p>
+	</div>
+</section>
+<footer class="bg bg_green">
+	<span>2014</span>
+	<div>Icons made by Icons8 from <a href="http://www.flaticon.com" target="_blank"  title="Flaticon">www.flaticon.com</a>         is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" target="_blank" title="Creative Commons BY 3.0">CC BY 3.0</a></div>	
+</footer>
+</body>
+</html>

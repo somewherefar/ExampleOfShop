@@ -1,0 +1,458 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+@import url(http://yui.yahooapis.com/3.9.1/build/cssreset/cssreset-min.css);
+body
+{
+	width: 1300px;
+	font: 400 10px "Times",cursive;
+	color:#709b1d;
+	a
+	{
+		text-decoration: none;
+		color:#709b1d;
+	}
+	.to_center
+	{
+		width: 960px;
+		margin: 0 auto;		
+	}
+	#nav_pages
+	{
+		height: 40px;
+	}
+	ul
+	{
+		a span
+		{
+			display: inline-block;
+			text-transform: capitalize;
+		}
+	}
+	nav
+	{
+		a
+		{
+			color: white;
+		}
+		ul span
+		{
+			font-size: 1.6em;
+		}
+		#pages_ul i, #settings_ul i
+		{
+			font-size: 1.5em;
+			padding-right: 0px;
+		}
+		#pages_ul span, #settings_ul span
+		{
+			padding:0 5px;
+		}
+		#pages_ul
+		{
+			margin-left: 10px;
+			li
+			{
+				margin: 0;
+				padding: 11px 8px 8px 8px;
+			}
+			li:hover
+			{
+				background-color: white;
+				a
+				{
+					color: hsla(80, 68%, 36%, 1);;
+				}
+				
+			}
+		}
+		#settings_ul
+		{
+			float: right;
+			li
+			{
+				margin: 0 3px;
+				padding: 9px 16px;
+				background: white;
+			}
+			i, span
+			{
+				color: hsla(80, 68%, 36%, 1);
+			}
+			span
+			{
+				padding: 0 5px;
+			}
+			#dollar_i
+			{
+				color: white;
+				padding: 1px 3px;
+			}
+		}
+	}
+	#logo_login_reg
+	{
+		padding:31px 0;
+		height: 27px;
+		#logo
+		{
+			float: left;
+			margin: 0 20px;
+			padding: 0px 20px;
+			font:400 3em 'Dancing Script',cursive;
+		}
+		#login_reg
+		{
+			float: right;
+			padding-right: 20px;
+			.cart_wishlist
+			{
+				display: inline-block;
+				position: relative;
+				margin-right: 10px;
+			}
+			a
+			{
+				display: inline-block;
+				font-size: 1.5em;
+				text-transform: uppercase;
+				color: hsla(80, 68%, 36%, 1);
+			}
+			#create_account_a
+			{
+				padding-right: 20px;
+			}
+			span
+			{
+				padding: 0 7px;
+				font-size: 1.4em;
+				color: black;
+			}
+			i
+			{
+				color: white;
+				font-size: 1.4em;
+				border-radius: 5px;
+				svg
+				{
+					position: absolute;
+					top: -18px;
+					right: -10px;
+					text
+					{
+						fill: white;
+						font-size: 0.5em;
+					}
+				}
+			}
+			#cart_i
+			{
+				padding: 6px 8px 4px 6px;
+			}
+			#wishlist_i
+			{
+				padding: 6px 4px 4px 8px;
+			}
+		}
+	}
+	#product_category
+	{
+		height: 41px;
+	}
+	menu
+	{
+		padding: 0;
+		ul
+		{
+			li
+			{
+				margin:4px 10px;
+				padding: 8px 8px;
+			}
+			li:hover
+			{
+				a
+				{
+					color: white;
+				}
+			}
+			a
+			{
+				display: inline-block;
+				font: 100 1.4em Arial,cursive;
+				text-transform: uppercase;
+			}
+		}
+		#search_li
+		{
+			padding: 4px 8px;
+		}
+	}
+	#advantages
+	{
+		height: 100px;
+		ul
+		{
+			clear: left;
+			color: white;
+		}
+		li
+		{
+			margin: 10px;
+			padding: 15px 20px;
+			background-color: hsla(80, 63%, 43%, 1);
+			border-radius: 5px;
+		}
+		i
+		{
+			padding-right: 15px;
+		}
+		.text
+		{
+			display: inline-block;
+			.title, .body
+			{
+				text-transform: capitalize;
+			}
+			.title
+			{
+				font-size: 2.2em;
+			}
+			.body
+			{
+				font-size: 1.5em;
+				color: black;
+			}
+		}
+		i.fa-unlock-alt
+		{
+			position: relative;
+			i.fa-remove
+			{
+				position: absolute;
+				top: 14px;
+				left: 5px;
+				font-size: 0.5em;
+				color: hsla(80, 68%, 36%, 1);
+			}
+		}
+	}
+	#our_brand
+	{
+		height: 190px;
+		h3
+		{
+			margin: 20px auto;
+			width: 150px;
+			padding: 10px;
+			font-size: 2.4em;
+			text-align: center;
+			text-transform: uppercase;
+			color: white;
+			background:#719a1d;
+			border-radius: 5px;
+		}
+		li
+		{
+			position: relative;
+			margin: 5px 20px;
+			padding: 5px 10px;
+			border-top:  1px solid hsla(0, 0%, 93%, 1);
+			border-bottom:  1px solid hsla(0, 0%, 93%, 1);
+
+			img
+			{
+				width: 100px;
+				height: 80px;
+			}
+			span
+			{
+				position: absolute;
+				top:0;
+				left:0;
+				z-index:999;
+				width: 120px;
+				display: block;
+				text-align: center;
+				margin:34px 0;
+				font: 400 2em 'Dancing Script',cursive;
+				background-color: hsla(0, 0%, 62%, 0.5);
+				color: black;
+			}
+		}
+	}
+	#site_links_group
+	{
+		height: 172px;
+		padding: 40px 0;
+		.group
+		{
+			float: left;
+			width: 220px;
+			margin: 10px;
+			p
+			{
+				padding: 4px 4px 5px 1px;
+				font-size: 1.9em;
+				border-bottom: 2px solid hsla(80, 68%, 36%, 1);
+				text-transform: uppercase;
+			}
+			ul
+			{
+				margin: 10px 10px 10px 0px;
+				li
+				{
+					font-size: 2em;
+					float: none;
+					color: black;
+					i
+					{
+						font-size: 0.7em;
+						padding-right: 10px;
+					}
+					a
+					{
+						text-transform: uppercase;
+						font-size: 0.6em;
+						color: black;
+					}
+				}
+			}
+		}
+	}
+	#payments_socials
+	{
+		clear: left;
+		height: 50px;
+		background-color: hsla(0, 0%, 63%, 1);
+		p
+		{
+			float: left;
+			margin: 9px;
+			padding: 7px 16px;
+			font-size: 1.6em;
+			color: white;
+			text-transform: uppercase;
+			border-radius: 2px;
+		}
+		ul
+		{
+			li
+			{
+				margin: 4px 7px;
+				i
+				{
+					color: black;	
+				}
+				i.fa-4x
+				{
+					font-size:4.3em;
+				}
+				i.fa-vk
+				{
+					padding:0 3px;
+					background-color: #00AD11;
+				}
+			}
+		}
+		#socials_ul,#followus_p
+		{
+			float: right;
+		}
+		#socials_ul
+		{
+			margin-right: 30px;
+		}
+	}
+	footer
+	{
+		padding:20px 0;
+		text-align: center;
+		color: white;
+		font-size: 1.5em;
+		a
+		{
+			color: hsla(123, 100%, 50%, 1);
+		}
+	}
+	ul
+	{
+		li
+		{
+			float: left;
+		}
+		li:first-child
+		{
+			margin-left: 0;
+		}
+		li:last-child
+		{
+			margin-right: 0;
+		}
+	}
+	.bg
+	{
+		width: 100%;
+	}
+	.bg_green
+	{
+		background-color: hsla(80, 68%, 36%, 1);
+	}
+	.bg_grey
+	{
+		background-color: hsla(0, 0%, 95%, 1);
+	}
+	menu li:hover, #our_brand h3:hover, #payments_socials p:hover,.l_r_c i:hover
+	{
+		background-color:#85b329;
+	}
+	#advantages ul li:hover
+	{
+		background: #70BD00;
+	}
+	#logo_login_reg #login_reg>a:hover
+	{
+		color: #005E0B;
+	}
+	.group
+	{
+		a:hover, li:hover
+		{
+			color:#730000;
+		}
+	}
+	#dynamic_content_1 
+	{
+		#checkout_container
+		{
+			float: left;
+
+		}
+	}
+	section
+	{
+		clear: left;
+	}
+	#modal
+	{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		border-radius: 5px;
+		padding: 40px;
+		background: #D1D1D1;
+	}
+}

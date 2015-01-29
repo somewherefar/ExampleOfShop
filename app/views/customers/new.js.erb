@@ -1,0 +1,7 @@
+var modal = $('<div id="modal">');
+modal.html("<%= j render 'new' %>");
+$('body').append(modal);
+$('#a').click(function(event) {
+	/* Act on the event */
+ 	alert('hello');
+});

@@ -1,0 +1,32 @@
+<%=content_for :d_c_1 do%>
+<div id="checkout_container">
+		<div id="select_step" class="steps">
+			<p class="bg_grey">step 1 : select action</p>
+			<div id="new_customer">
+				<div class="inner_content">
+					<p>new customer</p>
+					<span>registration option</span><br>
+					<input type="radio" name="option" value="register" checked="checked"><span>register account</span><br>
+					<input type="radio" name="option" value="guest" placeholder=""><span>guest</span><br>
+					<span class="lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint molestiae dolorum harum pariatur, nobis, nostrum quae ipsa recusandae velit libero voluptas officiis consequatur, quis animi. Impedit ut omnis, labore praesentium!</span><br>
+					<input type="submit" value="continue">
+				</div>
+			</div>
+			<div id="returning_customer">
+				<p>returning customer</p>
+				<div class="inner_content">
+					<span>i' am returning customer</span><br>
+					<span>email</span><input id="email" type="text"><br>
+					<span>password</span><input id="password" type="text"><br>
+					<a href="#">forgot your password?</a><br>
+					<input id="login_sub" type="submit" value="login">
+				</div>
+			</div>
+		</div>
+		<div class="steps"><p class="bg_grey">step 2 : billing information</p></div>
+		<div class="steps"><p class="bg_grey">step 3 : delivery information</p></div>
+		<div class="steps"><p class="bg_grey">step 4 : payment methods</p></div>
+		<div class="steps"><p class="bg_grey">step 5 : confirm order</p></div>
+</div>
+<%= render 'layouts/aside_block.html.erb'%>
+<%end%>
